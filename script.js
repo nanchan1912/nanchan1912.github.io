@@ -1,27 +1,18 @@
-// Utility function to get the type of element
-function getElementType(element) {
-    if (element.tagName === "IMG") return "image";
-    if (element.tagName === "A") return "link";
-    if (element.tagName === "P") return "text";
-    if (element.tagName === "UL" || element.tagName === "LI") return "list";
-    if (element.tagName === "H1" || element.tagName === "H2") return "heading";
-    if (element.tagName === "INPUT") return "input";
-    return element.tagName.toLowerCase();
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
   
-  // Log page view on load
-  window.addEventListener("load", () => {
-    const timestamp = new Date().toISOString();
-    console.log(`${timestamp}, view, body`);
-  });
+  function scrollToTextAnalysis() {
+    const section = document.getElementById('text-analysis');
+    if (section.classList.contains('hidden')) {
+      section.classList.remove('hidden');
+    }
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
   
-  // Log all click events
-  document.addEventListener("click", (e) => {
-    const timestamp = new Date().toISOString();
-    const elementType = getElementType(e.target);
-    console.log(`${timestamp}, click, ${elementType}`);
-  });
-
   function analyzeText() {
     const text = document.getElementById("textInput").value;
     const output = document.getElementById("output");
@@ -35,9 +26,8 @@ function getElementType(element) {
       else if (/[^a-zA-Z0-9\s]/.test(char)) specialSymbols++;
     }
   
-    words = text.trim().split(/\s+/).length;
+    words = text.trim().split(/\s+/).filter(Boolean).length;
   
-    // Pronouns, prepositions, and articles
     const pronouns = ['i', 'you', 'he', 'she', 'it', 'we', 'they', 'me', 'him', 'her', 'us', 'them'];
     const prepositions = ['in', 'on', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'over', 'under'];
     const articles = ['a', 'an', 'the'];
@@ -58,7 +48,6 @@ function getElementType(element) {
     const prepositionCount = countGroup(prepositions);
     const articleCount = countGroup(articles);
   
-    // Display all results
     output.textContent = `
   Letters: ${letters}
   Words: ${words}
@@ -76,5 +65,47 @@ function getElementType(element) {
   ${JSON.stringify(articleCount, null, 2)}
     `;
   }
+  function toggleHiddenBox() {
+    var box = document.getElementById("hiddenBox");
+    var gif = document.getElementById("hiddenGif");
+    if (box.style.display === "none") {
+      box.style.display = "block";
+      gif.style.display = "inline-block";
+    } else {
+      box.style.display = "none";
+      gif.style.display = "none";
+    }
+  }
+
+
+  //timestamp
+  function captureEvents() {
+    // Helper function to determine event object type
+    function getEventObjectType(element) {
+      if (element.tagName === 'IMG') return 'image';
+      if (element.tagName === 'SELECT') return 'drop-down';
+      if (element.tagName === 'BUTTON') return 'button';
+      if (element.tagName === 'A') return 'link';
+      if (element.tagName === 'P' || element.tagName.match(/^H[1-6]$/)) return 'text';
+      if (element.tagName === 'DIV') return 'container';
+      if (element.tagName === 'TEXTAREA') return 'textarea';
+      return 'other'; // Fallback for other elements
+    }
   
+    // Capture page view on load
+    window.addEventListener('load', () => {
+      const timestamp = new Date().toISOString();
+      console.log(`${timestamp}, view, page`);
+    });
   
+    // Capture click events on all elements
+    document.addEventListener('click', (event) => {
+      const timestamp = new Date().toISOString();
+      const element = event.target;
+      const objectType = getEventObjectType(element);
+      console.log(`${timestamp}, click, ${objectType}`);
+    });
+  }
+  
+  // Initialize event capturing
+  captureEvents();
