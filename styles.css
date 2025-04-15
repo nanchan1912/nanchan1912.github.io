@@ -1,25 +1,52 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Fredoka, sans-serif;
     line-height: 1.6;
-    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
   }
   
   header {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.85);
     color: white;
     padding: 20px 0;
     text-align: center;
   }
   
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  nav button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+  }
+  
+  nav button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  
   section {
     padding: 20px;
-    margin: 10px auto;
+    margin: 30px auto;
     max-width: 800px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    scroll-margin-top: 80px;
   }
   
   h2 {
@@ -29,5 +56,117 @@ body {
   img {
     margin: 10px;
     border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   
+  .soft-button {
+    display: block;
+    margin: 50px auto 20px;
+    padding: 12px 24px;
+    background-color: #ffffffdd;
+    color: #333;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .soft-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  footer {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .section-content .text {
+    flex: 1 1 60%;
+  }
+  
+  .section-img {
+    flex: 1 1 30%;
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+    height: 100%; /* Makes the image stretch to the full height of the parent */
+}
+  
+  #hiddenBox {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  #hiddenGif {
+    width: 500px; /* Adjust size as needed */
+    height: auto;
+    margin-left: 10px;
+    vertical-align: right; /* Aligns with the top of the hidden box */
+  }
+
+  .permanent-gif {
+    display: block;
+    margin-left: 500px;
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    margin-top: 10px; /* Space between 2.jpg and gif2.gif */
+  }
+
+  .cv-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .cv-link {
+    font-size: 1.5em;
+    color: #9d5555;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .cv-link:hover {
+    background-color: #bdbdbd;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .cv-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Reduced from 15px to make buttons closer */
+    margin-top: 20px;
+  }
+  
+  #cv .section-content {
+    gap: 10px; /* Override default gap for CV section to bring image and GIF closer */
+  }
+  
+  #cv .permanent-gif {
+    margin-top: 5px; /* Reduced margin to bring GIF closer to the image */
+  }
