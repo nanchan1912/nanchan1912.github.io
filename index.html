@@ -2,54 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NanChan Fanum Taxin WebPage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Welcome to My Personal Website</h1>
+    <h1>NanChan FanumTaxin Page</h1>
+    <nav>
+      <button onclick="scrollToSection('about')">NanChan</button>
+      <button onclick="scrollToSection('education')">Education</button>
+      <button onclick="scrollToSection('skills')">Skills</button>
+      <button onclick="scrollToSection('cv')">CV</button>
+      <button onclick="scrollToSection('inspirations')">My Inspirations</button>
+      <button onclick="scrollToSection('gallery')">Gallery</button>
+    </nav>
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I'm [Your Name]. I am a student at [Your College Name]. I love learning new things!</p>
-    <img src="your-photo.jpg" alt="My Profile Picture" width="200"/>
-    <img src="local-photo1.jpg" alt="Local Photo 1" width="200"/>
-    <img src="local-photo2.jpg" alt="Local Photo 2" width="200"/>
+    <div class="section-content">
+      <div class="text">
+        <h2>About Me</h2>
+        <p>Hi! I'm Nandini. I am a CSD fresher at IIIT Hyderabad. I love mathematics and learning new things. I am a part of my college's debate club.
+          I am also very interested in design and art. I love anime and japanese as well. I am the club coordinator of our Language Club. <a href="#" onclick="toggleHiddenBox()">Click here!</a></p>
+          
+        <div id="hiddenBox" style="display: none;">NOOOO ⛓😈😈😈🤬😡👺 HOW🤷‍♀️ DARE 👺 YOU👊 HIT MY SKBIDI ALPHA DUKE DENNIS KITTEN 😡⛓😈🤬🤬🤬⛓⛓ _you'll pay for this..._ *alpha scratches your neck and you fell down* THIS IS WHAT HAPPENDS WHEN YOU MESS WITH THE ALPHA OMEGA SKIBIDI RIZZLER ‼🤬⛓⛓⛓⛓👺⛓ *you get up and hit my kitten and my kitten pass out* GASP! YOU'LL PAY FOR THIS YOU BETA PLUH!! *alpha charges a duke dennis power and shoots you and you die* DONT 🚫🚫🚫❌❌ UNDERASTIMATE😡😡 THE POWER OF THE ULTIMATE MEWING ALPHA OMEGA SKIBIDI RIZZLER 😂😂🤬🤬👺👺⛓⛓⛓⛓ 
+        
+        </div>
+        <img id="hiddenGif" src="gif1.gif" alt="Animated GIF" style="display: none;" />
+        <h3>     Photos of my birthplace, Kanchipuram    </h3>
+<img src="kanchi1.jpeg" alt="Kanchipuram 1" width="200"/>
+<img src="kanchi2.jpeg" alt="Kanchipuram 2" width="200"/>
+      </div>
+      <img src="1.jpg" alt="About Me" class="section-img" />
+    </div>
   </section>
-
+  
   <section id="education">
-    <h2>Education Background</h2>
-    <ul>
-      <li>School 1</li>
-      <li>School 2</li>
-      <li>Achievements: XYZ</li>
-    </ul>
-  </section>
+    <div class="section-content">
+      <div class="text">
+        <h2>Education :))</h2>
+        <ul>
+          <li>Delhi Public School Bangalore North</li>
+          <li>Vyasa International School</li>
+          <li>IIIT Hyderabad</li>
+          <li>Karan Johar School of Nepotism</li>
+          <li>Achievements: 
+            <ul>Passed the JLPT N4 examination for japanese proficiency and will be writing N2 this summer</ul>
+            <ul>Written multiple plays in both english and sanskrit for upto national level competitions</ul>
+            <ul>Topped my school with 4 centums in the CBSE 10th board examinations</ul>
+            <ul>Have gotten 300/300 and secured AIR 1 in JEE Advanced</ul>
+            <ul>Met the Prime Minister of Uganda and taught him about JPop influence on Chinese Idols</ul>
+            <ul>Found a Shiny vaporeon in Pokemon FireRed</ul>
+            <ul>Helped AV Aditya's mother</ul>
+            <ul>Watched over 300 anime</ul>
+            <ul>Ate 17 chapatis in one sitting 7 years ago</ul>
 
+          </li>
+        </ul>
+      </div>
+      <img src="2.jpg" alt="Education" class="section-img" />
+      <img src="gif2.gif" alt="Permanent Animated GIF" class="permanent-gif" />
+    </div>
+  </section>
+  
   <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Python - Intermediate</li>
-      <li>C - Beginner</li>
-      <li>HTML/CSS/JS - Learning</li>
-    </ul>
+    <div class="section-content">
+      <div class="text">
+        <h2>My Skills</h2>
+        <ul>
+          <li>Python: Beginner</li>
+          <li>C/C++: Beginner</li>
+          <li>HTML/CSS/JS: Beginner</li>
+          <li>English: Beginner</li>
+          <li>Volleyball: Beginner</li>
+          <li>Certified Skibidi Florida Man Trader</li>
+          <li>Professional Pokemon</li>
+          <li>LTTE supporter</li>
+          <li>ISᵢS enjoyer</li>
+        </ul>
+      </div>
+      <img src="3.jpg" alt="Skills" class="section-img" />
+    </div>
   </section>
-
+  
   <section id="cv">
-    <h2>My CV</h2>
-    <a href="cv.pdf" target="_blank">Download My CV</a>
+    <div class="section-content">
+      <div class="text">
+        <h1 style="font-size: 2.5em; text-align: center;">My CV</h1>
+        <div class="cv-links">
+          <a href="cv.pdf" target="_blank" class="cv-link">Get my CV here</a> <br>
+          <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" class="cv-link">Video CV!</a>
+        </div>
+      </div>
+      <img src="4.jpg" alt="CV" class="section-img" />
+      <img src="gif3.gif" alt="Permanent Animated GIF" class="permanent-gif" />
+      
+    </div>
   </section>
 
-  <script src="script.js"></script>
-
-  <section id="text-analysis">
+  <section id="inspirations">
+    <div class="section-content">
+      <div class="text">
+        <h2>My Inspirations :)))</h2>
+        <ul>
+          <li>Sai Anirudh Karre</li>
+          <li>Prakhar Jain</li>
+          <li>Adari Dileepkumar</li>
+          <li>Chirag Dhamija</li>
+          <li>Amey Karan</li>
+          <li>Ansh Chablani</li>
+          <li>Rahul Singhal</li>
+          <li>Kevin Thakkar</li>
+          <li>Amrutia Neel Vijaykumar</li>
+          <li>Kavuri Vivek Hruday</li>
+          <li>Aaditya Vardhan Narain</li>
+        </ul>
+      </div>
+      <img src="5.jpg" alt="Inspirations" class="section-img" />
+      <img src="gif4.gif" alt="Permanent Animated GIF" class="permanent-gif" />
+    </div>
+  </section>
+  
+  <section id="gallery">
+    <div class="section-content">
+      <div class="text">
+        <h2>Gallery</h2>
+        <img src="nan1.jpg" alt="My Profile Picture" width="200"/>
+        <img src="nan2.jpg" alt="Local Photo 1" width="200"/>
+        <img src="nan3.jpg" alt="Local Photo 2" width="200"/>
+        <img src="nan4.jpg" alt="Local Photo 3" width="200"/>
+        <img src="nan5.jpg" alt="Local Photo 2" width="200"/>
+  
+        <img src="nan7.jpg" alt="Local Photo 2" width="200"/>
+      
+        <img src="nan9.jpg" alt="Local Photo 2" width="200"/>
+        <img src="nan10.jpg" alt="Local Photo 2" width="200"/>
+      </div>
+      <img src="6.jpg" alt="Gallery Side Image" class="section-img" />
+    </div>
+  </section>
+  
+  <section id="text-analysis" class="hidden">
     <h2>Text Analysis</h2>
     <textarea id="textInput" rows="15" cols="100" placeholder="Paste a big block of text here..."></textarea><br>
     <button onclick="analyzeText()">Analyze</button>
     <pre id="output"></pre>
+    <img src="gif5.gif" alt="Permanent Animated GIF" class="permanent-gif" />
   </section>
-  
+
+  <footer>
+    <button class="soft-button" onclick="scrollToTextAnalysis()">Text Analysis?</button>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
